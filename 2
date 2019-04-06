@@ -9,26 +9,45 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Podaj liczbę: ");
+        
         String a = scanner.nextLine();
+        
+        if (a == null || a.length() == 0) {
+        System.out.println("Musisz podać liczbę! ");
+        } else {
+            try {
+                int aInt = Integer.parseInt(a);
+                 }
+            } catch (NumberFormatException e) {
+            System.out.println("Podana wartość jest nieprawidłowa! ");
+            }
 
         System.out.println("Podaj liczbę: ");
+        
         String b=scanner.nextLine();
+        
+         if (b == null || b.length() == 0) {
+        System.out.println("Musisz podać liczbę! ");
+        } else {
+            try {
+                int bInt = Integer.parseInt(b);
+                 }
+            } catch (NumberFormatException e) {
+            System.out.println("Podana wartość jest nieprawidłowa! ");
+            }
 
-       double aDouble =Double.parseDouble(a);
-       double bDouble=Double.parseDouble(b);
-
-       dzielenie(aDouble, bDouble);
-       mnozenie(aDouble, bDouble);
+       dzielenie(aInt, bInt);
+       mnozenie(aInt, bInt);
     }
-        private static void dzielenie(double a, double b) {
-            double wynik;
+        private static void dzielenie(int a, int b) {
+            int wynik;
             if (b < 5){
                 wynik = a / b;
                 System.out.println("Iloraz liczb: " + wynik);
             }
         }
-        private static void mnozenie(double c, double d) {
-            double wynik=0;
+        private static void mnozenie(int c, int d) {
+            int wynik=0;
              if(d>=5) {
                 wynik = c * d;
                 System.out.println("Iloczyn liczb: " + wynik);
