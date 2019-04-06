@@ -1,0 +1,37 @@
+
+package homework2.classes;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Podaj liczbę: ");
+        String a = scanner.nextLine();
+
+        System.out.println("Podaj liczbę: ");
+        String b=scanner.nextLine();
+
+       double aDouble =Double.parseDouble(a);
+       double bDouble=Double.parseDouble(b);
+
+       dzielenie(aDouble, bDouble);
+       mnozenie(aDouble, bDouble);
+    }
+        private static void dzielenie(double a, double b) {
+            double wynik;
+            if (b < 5){
+                wynik = a / b;
+                System.out.println("Iloraz liczb: " + wynik);
+            }
+        }
+        private static void mnozenie(double c, double d) {
+            double wynik=0;
+             if(d>=5) {
+                wynik = c * d;
+                System.out.println("Iloczyn liczb: " + wynik);
+            }
+        }
+}
